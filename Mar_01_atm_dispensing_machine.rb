@@ -1,28 +1,8 @@
 =begin
-	
-Exercise File
-Code File
-
-Exercise Description
 Build out a method that takes two arguments: the total amount of money requested and the denominations that can be returned. And return the count of how many bills of each denomination should be returned to a user.
 
 Example Data Input
 245, [20, 10, 5]
-In this example, 245 is the total amount requested at the ATM, and the array represents 20, 10, and 5 dollar bills.
-
-Expected Output
-{20=>12, 10=>0, 5=>1}
-This hash represents 12 $20 dollar bills and 1 $5 dollar bills.
-	
-=end
-
-
-=begin
-  Build out a method that takes two arguments: the total amount of money requested and the denominations that can be returned. And return the count of how many bills of each denomination should be returned to a user.
-
-Example Data Input
-
-245, [20, 10, 5]
 
 In this example, 245 is the total amount requested at the ATM, and the array represents 20, 10, and 5 dollar bills.
 
@@ -31,7 +11,6 @@ Expected Output
 
 This hash represents 12 $20 dollar bills and 1 $5 dollar bills.
 =end
-
 
 def atm_dispensor money_requested, denomination
   
