@@ -13,29 +13,28 @@ This hash represents 12 $20 dollar bills and 1 $5 dollar bills.
 =end
 
 def atm_dispensor money_requested, denomination
-  
-  min_value = money_requested % denomination.min
+ 	min_value = money_requested % denomination.min
   if min_value !=0
-    puts "Please enter a denomination in multiples of #{denomination.min}" 
+   	puts "Please enter a denomination in multiples of #{denomination.min}" 
   else 
-	  if (money_requested >= denomination[0])
-      first_note = money_requested / denomination[0]        
+		if (money_requested >= denomination[0])
+    	first_note = money_requested / denomination[0]        
       first_modulo = money_requested % denomination[0]   
-      if first_modulo == 0 
-        hash = {denomination[0]=> first_note, denomination[1]=> 0, denomination[2]=> 0 }
-      elsif (first_modulo >= denomination[1])
-        second_note = first_modulo / denomination[1]        
-        second_modulo = first_modulo % denomination[1]
-        if second_modulo == 0
-          hash = {denomination[0]=> first_note, denomination[1]=> second_note, denomination[2]=> 0 }
-        else
-          third_note = second_modulo / denomination[2]      
-          hash = {denomination[0]=> first_note, denomination[1]=> second_note, denomination[2]=> third_note }
-        end
-      else
-        second_note = first_modulo / denomination[2]
-        hash = {denomination[0]=> first_note, denomination[1]=> 0, denomination[2]=> second_note }
-      end
+    	  if first_modulo == 0 
+      		hash = {denomination[0]=> first_note, denomination[1]=> 0, denomination[2]=> 0 }
+      	elsif (first_modulo >= denomination[1])
+        	second_note = first_modulo / denomination[1]        
+        	second_modulo = first_modulo % denomination[1]
+        		if second_modulo == 0
+          		hash = {denomination[0]=> first_note, denomination[1]=> second_note, denomination[2]=> 0 }
+        		else
+          		third_note = second_modulo / denomination[2]      
+          		hash = {denomination[0]=> first_note, denomination[1]=> second_note, denomination[2]=> third_note }
+        		end
+      	else
+        	second_note = first_modulo / denomination[2]
+        	hash = {denomination[0]=> first_note, denomination[1]=> 0, denomination[2]=> second_note }
+      	end
     elsif (money_requested >= denomination[1])
     	first_note = money_requested / denomination[1]        
     	first_modulo = money_requested % denomination[1]
