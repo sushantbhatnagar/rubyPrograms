@@ -5,7 +5,7 @@ pipeline{
 		stage('Build') {
 			steps {
 				echo 'Running a Ruby Program from Git...'
-				sh 'ruby ./random_number_generator.rb'
+				ruby ./random_number_generator.rb
 			}
 			post {
 				success {
