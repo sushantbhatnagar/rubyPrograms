@@ -10,7 +10,7 @@ def store_results_file
 	aFile = File.new("./random_number_result.txt", "r+")
 	aFile.truncate(0)
 	number = generate_random_number
-	aFile.syswrite("#{number}") if aFile
+	puts aFile.syswrite("#{number}")
 end
 
 store_results_file
