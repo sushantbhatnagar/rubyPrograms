@@ -9,7 +9,7 @@ pipeline{
 			post {
 				success {
 					echo 'Now Archiving...'
-					archiveArtifacts artifacts: '.random_number_result.txt'
+					archiveArtifacts artifacts: './random_number_result.txt'
 				}
 			}
 		}
